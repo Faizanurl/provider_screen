@@ -63,10 +63,31 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
     
-      floatingActionButton: FloatingActionButton(
-        onPressed: counter.increment,
-        tooltip: 'Increment',
-          child: const Icon(Icons.add),
+      floatingActionButton: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SizedBox(width: 30,),
+        
+          FloatingActionButton(
+            onPressed: counter.increment,
+            tooltip: 'Increment',
+              child: const Icon(Icons.add),
+          ),
+          
+          
+          FloatingActionButton(
+            onPressed: counter.reset,
+            tooltip: 'Reset',
+              child: const Icon(Icons.refresh),
+          ),
+
+          FloatingActionButton(
+            onPressed: counter.decrement,
+            tooltip: 'Decrement',
+              child: const Icon(Icons.remove),
+          ),
+          SizedBox(width: 30,),
+
+        ],
       ),
       
 
